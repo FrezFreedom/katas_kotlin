@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    implementation("org.junit.jupiter:junit-jupiter-params:5.0.0")
 }
 
 tasks.test {
