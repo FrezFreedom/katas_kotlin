@@ -6,7 +6,11 @@ class PasswordValidator {
         if(!lengthValidationResult.isValid)
             return lengthValidationResult
 
-        return this.validateNumeric(password)
+        val numericValidationResult = this.validateNumeric(password)
+        if(!numericValidationResult.isValid)
+            return this.validateNumeric(password)
+
+        return PasswordValidationResponse(true, "")
     }
 
     private fun validateLength(password: String): PasswordValidationResponse {

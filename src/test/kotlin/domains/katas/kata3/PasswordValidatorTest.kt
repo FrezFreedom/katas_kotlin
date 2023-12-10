@@ -35,6 +35,10 @@ class PasswordValidatorTest {
                 false,
                 "The password must contain at least 2 numbers"
             ), "CefGlue7"),
+            Arguments.of(PasswordValidationResponse(
+                true,
+                ""
+            ), "CefGlu17"),
         )
     }
 
