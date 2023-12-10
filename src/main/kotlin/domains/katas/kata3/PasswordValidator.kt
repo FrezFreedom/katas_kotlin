@@ -6,15 +6,12 @@ import org.katas.domains.katas.kata3.validators.NumericValidator
 
 class PasswordValidator {
     fun validate(password: String): PasswordValidationResponse {
-        val lengthValidationResult = this.validateLength(password)
-        if(!lengthValidationResult.isValid)
-            return lengthValidationResult
+        val validationResult = PasswordValidationResponse(true, "")
 
-        val numericValidationResult = this.validateNumeric(password)
-        if(!numericValidationResult.isValid)
-            return this.validateNumeric(password)
+        validationResult.update( this.validateLength(password) )
+        validationResult.update( this.validateNumeric(password) )
 
-        return PasswordValidationResponse(true, "")
+        return validationResult
     }
 
     private fun validateLength(password: String): PasswordValidationResponse {

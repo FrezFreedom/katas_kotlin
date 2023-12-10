@@ -43,6 +43,11 @@ class PasswordValidatorTest {
                 true,
                 ""
             ), "CefGlu17"),
+            Arguments.of(
+                PasswordValidationResponse(
+                    false,
+                    "Password must be at least 8 characters\\nThe password must contain at least 2 numbers"
+            ), "CefGlu1"),
         )
     }
 
