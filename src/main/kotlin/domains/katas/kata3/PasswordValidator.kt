@@ -1,11 +1,12 @@
 package org.katas.domains.katas.kata3
 
 class PasswordValidator {
-    fun validate(password: String): PasswordValidationResponse  {
+    fun validate(password: String): PasswordValidationResponse {
+        return this.validateLength(password)
+    }
 
-        return when {
-            password.length < 8 -> PasswordValidationResponse(false, "Password must be at least 8 characters")
-            else -> PasswordValidationResponse(true, "")
-        }
+    private fun validateLength(password: String): PasswordValidationResponse {
+        val lengthValidator = LengthValidator()
+        return lengthValidator.validate(password)
     }
 }
