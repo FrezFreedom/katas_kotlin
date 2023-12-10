@@ -22,7 +22,9 @@ class FizzBuzzSolverTest {
     companion object {
         @JvmStatic
         fun fizzBuzzData() = listOf(
-            Arguments.of("3", 3),
+            Arguments.of("Fizz", 3),
+            Arguments.of("Fizz", 6),
+            Arguments.of("5", 5),
         )
     }
 }
