@@ -24,7 +24,9 @@ class FizzBuzzSolverTest {
         fun fizzBuzzData() = listOf(
             Arguments.of("Fizz", 3),
             Arguments.of("Fizz", 6),
-            Arguments.of("5", 5),
+            Arguments.of("Buzz", 5),
+            Arguments.of("Buzz", 10),
+            Arguments.of("7", 7),
         )
     }
 }
