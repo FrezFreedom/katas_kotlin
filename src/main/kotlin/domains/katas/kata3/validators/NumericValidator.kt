@@ -1,4 +1,6 @@
-package org.katas.domains.katas.kata3
+package org.katas.domains.katas.kata3.validators
+
+import org.katas.domains.katas.kata3.dtos.PasswordValidationResponse
 
 class NumericValidator(private val minNumericCharacter: Int = 2) {
     private var errorMessageFormat = "The password must contain at least %d numbers"

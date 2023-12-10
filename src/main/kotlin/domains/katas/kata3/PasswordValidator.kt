@@ -1,5 +1,9 @@
 package org.katas.domains.katas.kata3
 
+import org.katas.domains.katas.kata3.dtos.PasswordValidationResponse
+import org.katas.domains.katas.kata3.validators.LengthValidator
+import org.katas.domains.katas.kata3.validators.NumericValidator
+
 class PasswordValidator {
     fun validate(password: String): PasswordValidationResponse {
         val lengthValidationResult = this.validateLength(password)
