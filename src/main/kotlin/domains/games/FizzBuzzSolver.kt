@@ -4,16 +4,12 @@ class FizzBuzzSolver {
 
     fun solve(number: Int): String {
 
-        if(number % 15 == 0)
-            return "FizzBuzz"
-
-        if(number % 3 == 0)
-            return "Fizz"
-
-        if(number % 5 == 0)
-            return "Buzz"
-
-        return number.toString()
+        return when {
+            number % 15 == 0 -> "FizzBuzz"
+            number % 3 == 0 -> "Fizz"
+            number % 5 == 0 -> "Buzz"
+            else -> number.toString()
+        }
     }
 
 }
