@@ -1,24 +1,37 @@
 package domains.katas.kata3
 
 import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.Arguments
+import org.junit.jupiter.params.provider.MethodSource
+import org.katas.domains.katas.kata3.PasswordValidationResponse
 import org.katas.domains.katas.kata3.PasswordValidator
 
 class PasswordValidatorTest {
 
     private val passwordValidator = PasswordValidator()
 
-    @Test
-    fun testPasswordValidator(){
-        val result = passwordValidator.validate("123456789")
+    @ParameterizedTest
+    @MethodSource("passwordValidatorData")
+    fun testPasswordValidator(expectedValue: PasswordValidationResponse, input: String){
 
-        Assertions.assertEquals(true, result.isValid)
-        Assertions.assertEquals("", result.error)
+        val result = passwordValidator.validate(input)
 
-        val result2 = passwordValidator.validate("1234567")
+        Assertions.assertEquals(expectedValue, result)
+    }
 
-        Assertions.assertEquals(false, result2.isValid)
-        Assertions.assertEquals("Password must be at least 8 characters", result2.error)
+    companion object {
+        @JvmStatic
+        fun passwordValidatorData() = listOf(
+            Arguments.of(PasswordValidationResponse(
+                true,
+                ""
+            ), "123456789"),
+            Arguments.of(PasswordValidationResponse(
+                false,
+                "Password must be at least 8 characters"
+            ), "1234567"),
+        )
     }
 
 }
