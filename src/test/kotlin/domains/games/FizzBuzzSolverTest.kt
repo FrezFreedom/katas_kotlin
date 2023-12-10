@@ -27,6 +27,8 @@ class FizzBuzzSolverTest {
             Arguments.of("Buzz", 5),
             Arguments.of("Buzz", 10),
             Arguments.of("7", 7),
+            Arguments.of("FizzBuzz", 15),
+            Arguments.of("FizzBuzz", 60),
         )
     }
 }
