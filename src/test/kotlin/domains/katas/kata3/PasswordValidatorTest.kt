@@ -14,6 +14,11 @@ class PasswordValidatorTest {
 
         Assertions.assertEquals(true, result.isValid)
         Assertions.assertEquals("", result.error)
+
+        val result2 = passwordValidator.validate("1234567")
+
+        Assertions.assertEquals(false, result2.isValid)
+        Assertions.assertEquals("Password must be at least 8 characters", result2.error)
     }
 
 }
