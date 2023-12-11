@@ -3,10 +3,11 @@ package org.katas.domain.katas.kata3
 import org.katas.domain.katas.kata3.dto.PasswordValidationResponse
 import org.katas.domain.katas.kata3.validator.CapitalValidator
 import org.katas.domain.katas.kata3.validator.LengthValidator
-import org.katas.domain.katas.kata3.validator.NumberToEnglishConvertor
 import org.katas.domain.katas.kata3.validator.NumericValidator
 
-class PasswordValidator {
+class PasswordValidator(private val lengthValidator: LengthValidator,
+                        private val numericValidator: NumericValidator,
+                        private val capitalValidator: CapitalValidator,) {
     fun validate(password: String): PasswordValidationResponse {
         val validationResult = PasswordValidationResponse(true, null)
 
@@ -18,18 +19,14 @@ class PasswordValidator {
     }
 
     private fun validateLength(password: String): PasswordValidationResponse {
-        val lengthValidator = LengthValidator()
         return lengthValidator.validate(password)
     }
 
     private fun validateNumeric(password: String): PasswordValidationResponse {
-        val numericValidator = NumericValidator()
         return numericValidator.validate(password)
     }
 
     private fun validateCapital(password: String): PasswordValidationResponse {
-        val numberToEnglishConvertor = NumberToEnglishConvertor()
-        val capitalValidator = CapitalValidator(numberToEnglishConvertor = numberToEnglishConvertor)
         return capitalValidator.validate(password)
     }
 }
