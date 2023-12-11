@@ -1,10 +1,10 @@
-package domains.katas.kata1
+package domain.katas.kata1
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
-import org.katas.domains.katas.kata1.FizzBuzzSolver
+import org.katas.domain.katas.kata1.FizzBuzzSolver
 
 class FizzBuzzSolverTest {
 

@@ -12,6 +12,7 @@ repositories {
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     implementation("org.junit.jupiter:junit-jupiter-params:5.0.0")
+    testImplementation("io.mockk:mockk:1.13.8")
 }
 
 tasks.test {

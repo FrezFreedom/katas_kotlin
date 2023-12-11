@@ -1,11 +1,11 @@
-package domains.katas.kata3
+package domain.katas.kata3
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
-import org.katas.domains.katas.kata3.dtos.PasswordValidationResponse
-import org.katas.domains.katas.kata3.PasswordValidator
+import org.katas.domain.katas.kata3.dtos.PasswordValidationResponse
+import org.katas.domain.katas.kata3.PasswordValidator
 
 class PasswordValidatorTest {
 
@@ -27,12 +27,12 @@ class PasswordValidatorTest {
                 PasswordValidationResponse(
                 true,
                 ""
-            ), "123456789"),
+            ), "A23456789"),
             Arguments.of(
                 PasswordValidationResponse(
                 false,
                 "Password must be at least 8 characters"
-            ), "1234567"),
+            ), "C234567"),
             Arguments.of(
                 PasswordValidationResponse(
                 false,
@@ -48,6 +48,11 @@ class PasswordValidatorTest {
                     false,
                     "Password must be at least 8 characters\\nThe password must contain at least 2 numbers"
             ), "CefGlu1"),
+            Arguments.of(
+                PasswordValidationResponse(
+                    false,
+                    "Password must contain at least one capital letter"
+            ), "wooden12"),
         )
     }
 

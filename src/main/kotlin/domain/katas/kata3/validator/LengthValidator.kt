@@ -1,6 +1,6 @@
-package org.katas.domains.katas.kata3.validators
+package org.katas.domain.katas.kata3.validators
 
-import org.katas.domains.katas.kata3.dtos.PasswordValidationResponse
+import org.katas.domain.katas.kata3.dtos.PasswordValidationResponse
 
 class LengthValidator(private val minPasswordSize: Int = 8) {
     private var errorMessageFormat = "Password must be at least %s characters"

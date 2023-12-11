@@ -1,4 +1,4 @@
-package org.katas.domains.katas.kata1
+package org.katas.domain.katas.kata1
 
 class FizzBuzzSolver {
 
