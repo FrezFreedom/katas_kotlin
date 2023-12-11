@@ -1,6 +1,6 @@
 package org.katas.domain.katas.kata3.validator
 
-import org.katas.domain.katas.kata3.dtos.PasswordValidationResponse
+import org.katas.domain.katas.kata3.dto.PasswordValidationResponse
 
 class CapitalValidator(private val minCapitalCharacter: Int = 1,
                        private val numberToEnglishConvertor: NumberToEnglishConvertor) {

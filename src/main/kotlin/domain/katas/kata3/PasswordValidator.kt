@@ -1,6 +1,6 @@
 package org.katas.domain.katas.kata3
 
-import org.katas.domain.katas.kata3.dtos.PasswordValidationResponse
+import org.katas.domain.katas.kata3.dto.PasswordValidationResponse
 import org.katas.domain.katas.kata3.validator.CapitalValidator
 import org.katas.domain.katas.kata3.validator.LengthValidator
 import org.katas.domain.katas.kata3.validator.NumberToEnglishConvertor
