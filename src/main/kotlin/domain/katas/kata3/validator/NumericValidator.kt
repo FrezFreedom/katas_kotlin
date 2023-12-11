@@ -2,10 +2,10 @@ package org.katas.domain.katas.kata3.validator
 
 import org.katas.domain.katas.kata3.dto.PasswordValidationResponse
 
-class NumericValidator(private val minNumericCharacter: Int = 2) {
+class NumericValidator(private val minNumericCharacter: Int = 2): Validator {
     private var errorMessageFormat = "The password must contain at least %d numbers"
 
-    fun validate(password: String): PasswordValidationResponse {
+    override fun validate(password: String): PasswordValidationResponse {
         if(this.numberOfNumericCharacters(password) < minNumericCharacter)
             return PasswordValidationResponse(false, errorMessageFormat.format(minNumericCharacter))
 
