@@ -12,7 +12,7 @@ class NumberToEnglishConvertorTest {
 
     @ParameterizedTest
     @MethodSource("numericValidatorData")
-    fun testConvert(expectedValue: String, input: Int){
+    fun testConvert(expectedValue: String?, input: Int){
 
         val result = numberToEnglishConvertor.convert(input)
 
@@ -27,6 +27,7 @@ class NumberToEnglishConvertorTest {
             Arguments.of("three", 3),
             Arguments.of("four", 4),
             Arguments.of("five", 5),
+            Arguments.of(null, 100),
         )
     }
 }
