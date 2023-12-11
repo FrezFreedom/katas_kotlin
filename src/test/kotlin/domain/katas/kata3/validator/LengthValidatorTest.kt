@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
-import org.katas.domain.katas.kata3.dto.PasswordValidationResponse
+import org.katas.domain.katas.kata3.dto.PasswordValidationResult
 import org.katas.domain.katas.kata3.validator.LengthValidator
 
 class LengthValidatorTest {
@@ -13,7 +13,7 @@ class LengthValidatorTest {
 
     @ParameterizedTest
     @MethodSource("lengthValidatorData")
-    fun testLengthValidator(expectedValue: PasswordValidationResponse, input: String){
+    fun testLengthValidator(expectedValue: PasswordValidationResult, input: String){
 
         val result = lengthValidator.validate(input)
 
@@ -24,19 +24,19 @@ class LengthValidatorTest {
         @JvmStatic
         fun lengthValidatorData() = listOf(
             Arguments.of(
-                PasswordValidationResponse(
+                PasswordValidationResult(
                     true,
-                    null
+                    mutableSetOf()
                 ), "A23456789"),
             Arguments.of(
-                PasswordValidationResponse(
+                PasswordValidationResult(
                     false,
-                    "Password must be at least 8 characters"
+                    mutableSetOf("Password must be at least 8 characters")
                 ), "C234567"),
             Arguments.of(
-                PasswordValidationResponse(
+                PasswordValidationResult(
                     false,
-                    "Password must be at least 8 characters"
+                    mutableSetOf("Password must be at least 8 characters")
                 ), ""),
         )
     }

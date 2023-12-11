@@ -1,6 +1,6 @@
 package org.katas.domain.katas.kata3.validator
 
-import org.katas.domain.katas.kata3.dto.PasswordValidationResponse
+import org.katas.domain.katas.kata3.dto.PasswordValidationResult
 
 
 class SpecialValidator(private val minNumberOfSpecialCharacter: Int = 1,
@@ -11,12 +11,12 @@ class SpecialValidator(private val minNumberOfSpecialCharacter: Int = 1,
         private const val SPECIAL_CHARACTERS = "!@#$%^&*()_+-={}[]|\\:;'\"><,.?/`~"
     }
 
-    override fun validate(password: String): PasswordValidationResponse {
+    override fun validate(password: String): PasswordValidationResult {
         if (numberOfSpecialCharacter(password) < minNumberOfSpecialCharacter){
             val englishNumber = numberToEnglishConvertor.convert(minNumberOfSpecialCharacter)
-            return PasswordValidationResponse(false, String.format(ERROR_MESSAGE_FORMAT, englishNumber))
+            return PasswordValidationResult(false, mutableSetOf(String.format(ERROR_MESSAGE_FORMAT, englishNumber)))
         }
-        return PasswordValidationResponse(true, null)
+        return PasswordValidationResult(true, mutableSetOf())
     }
 
 

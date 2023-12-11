@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
-import org.katas.domain.katas.kata3.dto.PasswordValidationResponse
+import org.katas.domain.katas.kata3.dto.PasswordValidationResult
 import org.katas.domain.katas.kata3.validator.NumericValidator
 
 class NumericValidatorTest {
@@ -12,7 +12,7 @@ class NumericValidatorTest {
 
     @ParameterizedTest
     @MethodSource("numericValidatorData")
-    fun testNumericValidator(expectedValue: PasswordValidationResponse, input: String){
+    fun testNumericValidator(expectedValue: PasswordValidationResult, input: String){
 
         val result = numericValidator.validate(input)
 
@@ -23,19 +23,19 @@ class NumericValidatorTest {
         @JvmStatic
         fun numericValidatorData() = listOf(
             Arguments.of(
-                PasswordValidationResponse(
+                PasswordValidationResult(
                     true,
-                    null
+                    mutableSetOf()
                 ), "ABCDEF78"),
             Arguments.of(
-                PasswordValidationResponse(
+                PasswordValidationResult(
                     false,
-                    "The password must contain at least 2 numbers"
+                    mutableSetOf("The password must contain at least 2 numbers")
                 ), "ABCDEFG8"),
             Arguments.of(
-                PasswordValidationResponse(
+                PasswordValidationResult(
                     false,
-                    "The password must contain at least 2 numbers"
+                    mutableSetOf("The password must contain at least 2 numbers")
                 ), ""),
         )
     }

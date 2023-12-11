@@ -7,7 +7,7 @@ import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
-import org.katas.domain.katas.kata3.dto.PasswordValidationResponse
+import org.katas.domain.katas.kata3.dto.PasswordValidationResult
 import org.katas.domain.katas.kata3.validator.CapitalValidator
 import org.katas.domain.katas.kata3.validator.NumberToEnglishConvertor
 
@@ -20,7 +20,7 @@ class CapitalValidatorTest {
 
     @ParameterizedTest
     @MethodSource("validateData")
-    fun testValidate(expectedValue: PasswordValidationResponse, input: String){
+    fun testValidate(expectedValue: PasswordValidationResult, input: String){
         val result = capitalValidator.validate(input)
 
         Assertions.assertEquals(expectedValue, result)
@@ -30,19 +30,19 @@ class CapitalValidatorTest {
         @JvmStatic
         fun validateData() = listOf(
             Arguments.of(
-                PasswordValidationResponse(
+                PasswordValidationResult(
                     true,
-                    null
+                    mutableSetOf()
                 ), "Bcdedit"),
             Arguments.of(
-                PasswordValidationResponse(
+                PasswordValidationResult(
                     false,
-                    "Password must contain at least one capital letter"
+                    mutableSetOf("Password must contain at least one capital letter")
                 ), "bcdedit"),
             Arguments.of(
-                PasswordValidationResponse(
+                PasswordValidationResult(
                     false,
-                    "Password must contain at least one capital letter"
+                    mutableSetOf("Password must contain at least one capital letter")
                 ), ""),
         )
     }
