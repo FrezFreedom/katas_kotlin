@@ -4,20 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bf8dc73-56d8-4efc-b670-5be60e5552d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+    <list default="true" id="1bf8dc73-56d8-4efc-b670-5be60e5552d9" name="Changes" comment="Refactor PasswordValidationResponse and create its test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/PasswordValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/PasswordValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/dto/PasswordValidationResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/dto/PasswordValidationResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/validator/CapitalValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/validator/CapitalValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/validator/LengthValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/validator/LengthValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/validator/NumericValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/katas/kata3/validator/NumericValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/PasswordValidatorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/PasswordValidatorTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/dto/PasswordValidationResponseTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/dto/PasswordValidationResponseTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/validator/CapitalValidatorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/validator/CapitalValidatorTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/validator/LengthValidatorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/validator/LengthValidatorTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/validator/NumericValidatorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/domain/katas/kata3/validator/NumericValidatorTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +27,40 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Katas" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -41,27 +71,180 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build Katas.executor": "Run",
+    "Gradle.CapitalValidatorTest.executor": "Run",
+    "Gradle.CapitalValidatorTest.testValidate.executor": "Run",
+    "Gradle.FizzBuzzSolverTest (1).executor": "Run",
+    "Gradle.FizzBuzzSolverTest.executor": "Run",
+    "Gradle.FizzBuzzSolverTest.testFizzBuzzV3.executor": "Run",
+    "Gradle.LengthValidatorTest.executor": "Run",
+    "Gradle.NumberToEnglishConvertorTest.executor": "Run",
+    "Gradle.NumericValidatorTest.executor": "Run",
+    "Gradle.PasswordValidationResponseTest.executor": "Run",
+    "Gradle.PasswordValidationResponseTest.testUpdate.executor": "Run",
+    "Gradle.PasswordValidatorTest (1).executor": "Run",
+    "Gradle.PasswordValidatorTest.executor": "Run",
+    "Gradle.PasswordValidatorTest.testPasswordValidator.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/sls/IdeaProjects/Katas",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.katas.MainKt" />
-      <module name="Katas.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="domains.katas.kata3.validators" />
+      <recent name="domains.katas.kata3.dtos" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="domain.katas.kata3.dto" />
+      <recent name="domain.katas.kata3.validator" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.PasswordValidationResponseTest.testUpdate">
+    <configuration name="CapitalValidatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;domain.katas.kata3.validator.CapitalValidatorTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CapitalValidatorTest.testValidate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;domain.katas.kata3.validator.CapitalValidatorTest.testValidate&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="NumberToEnglishConvertorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;domain.katas.kata3.validator.NumberToEnglishConvertorTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PasswordValidationResponseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;domain.katas.kata3.dto.PasswordValidationResponseTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PasswordValidationResponseTest.testUpdate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;domain.katas.kata3.dto.PasswordValidationResponseTest.testUpdate&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.PasswordValidationResponseTest.testUpdate" />
+        <item itemvalue="Gradle.PasswordValidationResponseTest" />
+        <item itemvalue="Gradle.CapitalValidatorTest.testValidate" />
+        <item itemvalue="Gradle.CapitalValidatorTest" />
+        <item itemvalue="Gradle.NumberToEnglishConvertorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -81,10 +264,351 @@
       <option name="presentableId" value="Default" />
       <updated>1702194816918</updated>
       <workItem from="1702194818026" duration="32000" />
+      <workItem from="1702194859529" duration="17850000" />
+      <workItem from="1702267865306" duration="12248000" />
     </task>
+    <task id="LOCAL-00001" summary="Start katas project">
+      <option name="closed" value="true" />
+      <created>1702195104689</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702195104689</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add junit to gradle">
+      <option name="closed" value="true" />
+      <created>1702195520195</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702195520195</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add FizzBuzzSolver and its test">
+      <option name="closed" value="true" />
+      <created>1702196220840</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702196220840</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update FizzBuzzSolver to support multiples of 3">
+      <option name="closed" value="true" />
+      <created>1702196396503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702196396503</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update FizzBuzzSolver to support multiples of 5">
+      <option name="closed" value="true" />
+      <created>1702196496044</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702196496044</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update FizzBuzzSolver to support multiples of 3 and 5">
+      <option name="closed" value="true" />
+      <created>1702196820155</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702196820155</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactor FizzBuzzSolver class">
+      <option name="closed" value="true" />
+      <created>1702197126564</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702197126564</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Refactor FizzBuzzSolver class">
+      <option name="closed" value="true" />
+      <created>1702199296944</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702199296944</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change packages names of FizzBuzzClass and its test">
+      <option name="closed" value="true" />
+      <created>1702199549619</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702199549619</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Start kata2 first section">
+      <option name="closed" value="true" />
+      <created>1702203930405</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702203930405</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Start kata2 first section">
+      <option name="closed" value="true" />
+      <created>1702203977587</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702203977587</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add more test and refactor code to pass the test">
+      <option name="closed" value="true" />
+      <created>1702204395912</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702204395912</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Refactor PasswordValidatorTest in section 1">
+      <option name="closed" value="true" />
+      <created>1702204846292</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702204846292</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Refactor PasswordValidatorTest in section 1">
+      <option name="closed" value="true" />
+      <created>1702204867824</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702204867824</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add LengthValidator and refactor PasswordValidatorTest in section 1">
+      <option name="closed" value="true" />
+      <created>1702206619241</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702206619241</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add NumericValidator and refactor PasswordValidator and its test in section 2">
+      <option name="closed" value="true" />
+      <created>1702208379230</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702208379230</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add NumericValidator and refactor PasswordValidator and its test in section 2">
+      <option name="closed" value="true" />
+      <created>1702208399386</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702208399386</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Refactor tests and refactor code to pass it">
+      <option name="closed" value="true" />
+      <created>1702208804750</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702208804750</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Relocate some files">
+      <option name="closed" value="true" />
+      <created>1702209279936</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1702209279936</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactor test and refactor code to pass it">
+      <option name="closed" value="true" />
+      <created>1702209978590</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1702209978590</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Refactor test and refactor code to pass it">
+      <option name="closed" value="true" />
+      <created>1702210136729</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1702210136729</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add CapitalValidator and refactor some files and packages">
+      <option name="closed" value="true" />
+      <created>1702268158744</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1702268158744</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add LengthValidatorTest and some changes">
+      <option name="closed" value="true" />
+      <created>1702268886575</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1702268886575</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Add NumberToEnglishConvertorTest and its class">
+      <option name="closed" value="true" />
+      <created>1702269850700</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1702269850700</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Extend test and update NumberToEnglishConvertor to pass test and fix some problems">
+      <option name="closed" value="true" />
+      <created>1702270336873</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1702270336873</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Extend test and update NumberToEnglishConvertor to pass test and fix some problems">
+      <option name="closed" value="true" />
+      <created>1702270374484</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1702270374484</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Refactor CapitalValidator and its test and some fixes">
+      <option name="closed" value="true" />
+      <created>1702274018779</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1702274018779</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Refactor CapitalValidator and its test and some fixes">
+      <option name="closed" value="true" />
+      <created>1702274141041</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702274141041</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Refactor CapitalValidatorTest">
+      <option name="closed" value="true" />
+      <created>1702276556712</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1702276556712</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Refactor CapitalValidatorTest">
+      <option name="closed" value="true" />
+      <created>1702277183949</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1702277183949</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Refactor PasswordValidationResponse and create its test">
+      <option name="closed" value="true" />
+      <created>1702279951450</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1702279951450</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Start katas project" />
+    <MESSAGE value="Add junit to gradle" />
+    <MESSAGE value="Add FizzBuzzSolver and its test" />
+    <MESSAGE value="Update FizzBuzzSolver to support multiples of 3" />
+    <MESSAGE value="Update FizzBuzzSolver to support multiples of 5" />
+    <MESSAGE value="Update FizzBuzzSolver to support multiples of 3 and 5" />
+    <MESSAGE value="Refactor FizzBuzzSolver class" />
+    <MESSAGE value="change packages names of FizzBuzzClass and its test" />
+    <MESSAGE value="Start kata2 first section" />
+    <MESSAGE value="Add more test and refactor code to pass the test" />
+    <MESSAGE value="Refactor PasswordValidatorTest in section 1" />
+    <MESSAGE value="Add LengthValidator and refactor PasswordValidatorTest in section 1" />
+    <MESSAGE value="Add NumericValidator and refactor PasswordValidator and its test in section 2" />
+    <MESSAGE value="Refactor tests and refactor code to pass it" />
+    <MESSAGE value="Relocate some files" />
+    <MESSAGE value="Refactor test and refactor code to pass it" />
+    <MESSAGE value="Add CapitalValidator and refactor some files and packages" />
+    <MESSAGE value="Add LengthValidatorTest and some changes" />
+    <MESSAGE value="Add NumberToEnglishConvertorTest and its class" />
+    <MESSAGE value="Extend test and update NumberToEnglishConvertor to pass test and fix some problems" />
+    <MESSAGE value="Refactor CapitalValidator and its test and some fixes" />
+    <MESSAGE value="Remove unused import package" />
+    <MESSAGE value="Refactor CapitalValidatorTest" />
+    <MESSAGE value="Refactor PasswordValidationResponse and create its test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor PasswordValidationResponse and create its test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/domain/katas/kata1/FizzBuzzSolverTest.kt</url>
+          <line>8</line>
+          <properties class="domain.katas.kata1.FizzBuzzSolverTest" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
