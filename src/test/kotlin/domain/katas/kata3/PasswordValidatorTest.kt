@@ -33,7 +33,7 @@ class PasswordValidatorTest {
         every { capitalValidator.validate(any()) } returns capitalValidatorMockResponse
         every { specialValidator.validate(any()) } returns  specialValidatorMockResponse
 
-        passwordValidator = PasswordValidator(lengthValidator, numericValidator, capitalValidator, specialValidator)
+        passwordValidator = PasswordValidator(listOf( lengthValidator, numericValidator, capitalValidator, specialValidator ))
 
         val validationResult = passwordValidator.validate("nothing")
 
