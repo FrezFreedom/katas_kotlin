@@ -1,13 +1,16 @@
-package org.katas.domain.katas.kata3.validators
+package org.katas.domain.katas.kata3.validator
 
 import org.katas.domain.katas.kata3.dtos.PasswordValidationResponse
 
-class CapitalValidator(private val minCapitalCharacter: Int = 1) {
+class CapitalValidator(private val minCapitalCharacter: Int = 1,
+                       private val numberToEnglishConvertor: NumberToEnglishConvertor) {
+
     private var errorMessageFormat = "Password must contain at least %s capital letter"
 
     fun validate(password: String): PasswordValidationResponse {
         if(this.numberOfCapitalCharacters(password) < minCapitalCharacter) {
-            return PasswordValidationResponse(false, errorMessageFormat.format("one"))
+            val englishNumber = numberToEnglishConvertor.convert(minCapitalCharacter)
+            return PasswordValidationResponse(false, errorMessageFormat.format(englishNumber))
         }
         return PasswordValidationResponse(true, "")
     }

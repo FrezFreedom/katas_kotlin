@@ -1,4 +1,4 @@
-package org.katas.domain.katas.kata3.validators
+package org.katas.domain.katas.kata3.validator
 
 import org.katas.domain.katas.kata3.dtos.PasswordValidationResponse
 
