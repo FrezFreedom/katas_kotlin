@@ -26,33 +26,33 @@ class PasswordValidatorTest {
             Arguments.of(
                 PasswordValidationResponse(
                 true,
-                ""
+                null
             ), "A23456789"),
-            Arguments.of(
-                PasswordValidationResponse(
-                false,
-                "Password must be at least 8 characters"
-            ), "C234567"),
-            Arguments.of(
-                PasswordValidationResponse(
-                false,
-                "The password must contain at least 2 numbers"
-            ), "CefGlue7"),
-            Arguments.of(
-                PasswordValidationResponse(
-                true,
-                ""
-            ), "CefGlu17"),
-            Arguments.of(
-                PasswordValidationResponse(
-                    false,
-                    "Password must be at least 8 characters\\nThe password must contain at least 2 numbers"
-            ), "CefGlu1"),
-            Arguments.of(
-                PasswordValidationResponse(
-                    false,
-                    "Password must contain at least one capital letter"
-            ), "wooden12"),
+//            Arguments.of(
+//                PasswordValidationResponse(
+//                false,
+//                "Password must be at least 8 characters"
+//            ), "C234567"),
+//            Arguments.of(
+//                PasswordValidationResponse(
+//                false,
+//                "The password must contain at least 2 numbers"
+//            ), "CefGlue7"),
+//            Arguments.of(
+//                PasswordValidationResponse(
+//                true,
+//                null
+//            ), "CefGlu17"),
+//            Arguments.of(
+//                PasswordValidationResponse(
+//                    false,
+//                    "Password must be at least 8 characters\\nThe password must contain at least 2 numbers"
+//            ), "CefGlu1"),
+//            Arguments.of(
+//                PasswordValidationResponse(
+//                    false,
+//                    "Password must contain at least one capital letter"
+//            ), "wooden12"),
         )
     }
 

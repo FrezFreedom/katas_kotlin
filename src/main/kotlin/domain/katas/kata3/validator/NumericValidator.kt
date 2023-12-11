@@ -9,7 +9,7 @@ class NumericValidator(private val minNumericCharacter: Int = 2) {
         if(this.numberOfNumericCharacters(password) < minNumericCharacter)
             return PasswordValidationResponse(false, errorMessageFormat.format(minNumericCharacter))
 
-        return PasswordValidationResponse(true, "")
+        return PasswordValidationResponse(true, null)
     }
 
     private fun numberOfNumericCharacters(string: String): Int {

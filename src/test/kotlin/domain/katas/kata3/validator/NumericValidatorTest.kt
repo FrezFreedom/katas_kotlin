@@ -25,7 +25,7 @@ class NumericValidatorTest {
             Arguments.of(
                 PasswordValidationResponse(
                     true,
-                    ""
+                    null
                 ), "ABCDEF78"),
             Arguments.of(
                 PasswordValidationResponse(

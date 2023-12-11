@@ -32,7 +32,7 @@ class CapitalValidatorTest {
             Arguments.of(
                 PasswordValidationResponse(
                     true,
-                    ""
+                    null
                 ), "Bcdedit"),
             Arguments.of(
                 PasswordValidationResponse(

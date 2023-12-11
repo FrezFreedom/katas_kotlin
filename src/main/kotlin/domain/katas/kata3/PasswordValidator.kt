@@ -8,7 +8,7 @@ import org.katas.domain.katas.kata3.validator.NumericValidator
 
 class PasswordValidator {
     fun validate(password: String): PasswordValidationResponse {
-        val validationResult = PasswordValidationResponse(true, "")
+        val validationResult = PasswordValidationResponse(true, null)
 
         validationResult.update( this.validateLength(password) )
         validationResult.update( this.validateNumeric(password) )

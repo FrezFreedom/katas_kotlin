@@ -12,7 +12,7 @@ class CapitalValidator(private val minCapitalCharacter: Int = 1,
             val englishNumber = numberToEnglishConvertor.convert(minCapitalCharacter)
             return PasswordValidationResponse(false, errorMessageFormat.format(englishNumber))
         }
-        return PasswordValidationResponse(true, "")
+        return PasswordValidationResponse(true, null)
     }
 
     private fun numberOfCapitalCharacters(string: String): Int {

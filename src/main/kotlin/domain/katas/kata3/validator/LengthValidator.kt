@@ -7,6 +7,6 @@ class LengthValidator(private val minPasswordSize: Int = 8) {
 
     fun validate(password: String): PasswordValidationResponse {
         if(password.length < minPasswordSize) return PasswordValidationResponse(false, errorMessageFormat.format(minPasswordSize))
-        return PasswordValidationResponse(true, "")
+        return PasswordValidationResponse(true, null)
     }
 }

@@ -26,7 +26,7 @@ class LengthValidatorTest {
             Arguments.of(
                 PasswordValidationResponse(
                     true,
-                    ""
+                    null
                 ), "A23456789"),
             Arguments.of(
                 PasswordValidationResponse(
