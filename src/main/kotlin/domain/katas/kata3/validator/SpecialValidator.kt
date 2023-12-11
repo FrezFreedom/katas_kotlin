@@ -7,8 +7,8 @@ class SpecialValidator(private val minNumberOfSpecialCharacter: Int = 1,
                        private val numberToEnglishConvertor: NumberToEnglishConvertor): Validator {
 
     companion object {
-        const val ERROR_MESSAGE_FORMAT = "Password must contain at least %s special character"
-        const val SPECIAL_CHARACTERS = "!@#$%^&*()_+-={}[]|\\:;'\"><,.?/`~"
+        private const val ERROR_MESSAGE_FORMAT = "Password must contain at least %s special character"
+        private const val SPECIAL_CHARACTERS = "!@#$%^&*()_+-={}[]|\\:;'\"><,.?/`~"
     }
 
     override fun validate(password: String): PasswordValidationResponse {
@@ -22,8 +22,8 @@ class SpecialValidator(private val minNumberOfSpecialCharacter: Int = 1,
 
     private fun numberOfSpecialCharacter(string: String): Int {
         var cnt = 0
-        for(char in SPECIAL_CHARACTERS){
-            if(char in string)
+        SPECIAL_CHARACTERS.forEach {
+            if(it in string)
                 cnt++
         }
 
