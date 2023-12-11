@@ -1,12 +1,10 @@
 package domain.katas.kata3.validator
 
 import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import org.katas.domain.katas.kata3.dtos.PasswordValidationResponse
-import org.katas.domain.katas.kata3.validators.LengthValidator
 import org.katas.domain.katas.kata3.validators.NumericValidator
 
 class NumericValidatorTest {
