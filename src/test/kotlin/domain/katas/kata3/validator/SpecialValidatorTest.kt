@@ -3,6 +3,7 @@ package domain.katas.kata3.validator
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
@@ -16,6 +17,7 @@ class SpecialValidatorTest {
     }
     private val specialValidator = SpecialValidator(numberToEnglishConvertor = mockNumberToEnglishConvertor)
 
+    @DisplayName("validate should return expected result based on special character")
     @ParameterizedTest
     @MethodSource("validateData")
     fun testValidate(expectedValue: PasswordValidationResult, input: String){
