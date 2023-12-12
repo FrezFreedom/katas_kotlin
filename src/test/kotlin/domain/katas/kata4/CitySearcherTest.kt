@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.MethodSource
 import org.katas.domain.katas.kata4.CityRepository
 import org.katas.domain.katas.kata4.CitySearcher
 import org.katas.domain.katas.kata4.Database
+import kotlin.test.assertTrue
 
 class CitySearcherTest {
 
@@ -19,9 +20,11 @@ class CitySearcherTest {
         val cityRepository = CityRepository(database)
         val citySearcher = CitySearcher(cityRepository)
 
-        val searchResult = citySearcher.search(term)
+        val result = citySearcher.search(term)
 
-        Assertions.assertEquals(expectedValue, searchResult)
+        Assertions.assertEquals(expectedValue.size, result.size)
+        assertTrue { expectedValue.containsAll(result) }
+        assertTrue { result.containsAll(expectedValue) }
     }
 
     companion object {
@@ -31,7 +34,10 @@ class CitySearcherTest {
             Arguments.of(listOf("Valencia", "Vancouver"), "Va"),
             Arguments.of(emptyList<String>(), "Xa"),
             Arguments.of(emptyList<String>(), ""),
-            Arguments.of(listOf("Istanbul"), "Is"),
+            Arguments.of(listOf("Istanbul", "Paris"), "Is"),
+            Arguments.of(listOf("Istanbul"), "tan"),
+            Arguments.of(listOf("Valencia", "Vancouver"), "va"),
+            Arguments.of(listOf("Vancouver", "Bangkok", "Istanbul"), "an"),
         )
     }
 }
