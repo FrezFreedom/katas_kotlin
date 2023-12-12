@@ -29,6 +29,9 @@ class CitySearcherTest {
         fun searchData() = listOf(
             Arguments.of(emptyList<String>(), "x"),
             Arguments.of(listOf("Valencia", "Vancouver"), "Va"),
+            Arguments.of(emptyList<String>(), "Xa"),
+            Arguments.of(emptyList<String>(), ""),
+            Arguments.of(listOf("Istanbul"), "Is"),
         )
     }
 }
