@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import org.katas.domain.katas.kata4.CityRepository
 import org.katas.domain.katas.kata4.Database
+import kotlin.test.assertTrue
 
 class CityRepositoryTest {
 
@@ -22,7 +23,9 @@ class CityRepositoryTest {
 
         val result = cityRepository.all()
 
-        Assertions.assertEquals(expectedValue, result)
+        Assertions.assertEquals(expectedValue.size, result.size)
+        assertTrue { expectedValue.containsAll(result) }
+        assertTrue { result.containsAll(expectedValue) }
     }
 
     @DisplayName("searchByTerm should return a list of cities that start with specific term")
@@ -32,9 +35,11 @@ class CityRepositoryTest {
         val database = Database()
         val cityRepository = CityRepository(database)
 
-        val result = cityRepository.findCitiesStartingWith(term)
+        val result = cityRepository.searchByTerm(term)
 
-        Assertions.assertEquals(expectedValue, result)
+        Assertions.assertEquals(expectedValue.size, result.size)
+        assertTrue { expectedValue.containsAll(result) }
+        assertTrue { result.containsAll(expectedValue) }
     }
 
     companion object {
@@ -46,8 +51,9 @@ class CityRepositoryTest {
             Arguments.of(listOf("Paris", "Budapest", "Skopje", "Rotterdam", "Valencia",
                 "Vancouver", "Amsterdam", "Vienna", "Sydney", "New York City",
                 "London", "Bangkok", "Hong Kong", "Dubai", "Rome", "Istanbul"), ""),
-            Arguments.of(listOf("Istanbul"), "Is"),
+            Arguments.of(listOf("Istanbul", "Paris"), "Is"),
             Arguments.of(listOf("Valencia", "Vancouver"), "va"),
+            Arguments.of(listOf("Vancouver", "Bangkok", "Istanbul"), "an"),
         )
     }
 }

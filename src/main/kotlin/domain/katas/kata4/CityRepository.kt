@@ -6,7 +6,7 @@ class CityRepository(private val database: Database) {
         return database.getAllCities()
     }
 
-    fun findCitiesStartingWith(term: String): List<String> {
-        return database.getAllCities().filter { it.lowercase().startsWith(term.lowercase()) }
+    fun searchByTerm(term: String): List<String> {
+        return database.getAllCities().filter { it.lowercase().contains(term.lowercase()) }
     }
 }
