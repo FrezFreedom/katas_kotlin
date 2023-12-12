@@ -6,7 +6,7 @@ class CityRepository(private val database: Database) {
         return database.getAllCities()
     }
 
-    fun searchByTerm(term: String): List<String> {
+    fun findCitiesStartingWith(term: String): List<String> {
         return database.getAllCities().filter { it.startsWith(term) }
     }
 }

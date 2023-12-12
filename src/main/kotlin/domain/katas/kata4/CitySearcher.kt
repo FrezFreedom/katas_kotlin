@@ -5,7 +5,7 @@ class CitySearcher(private val cityRepository: CityRepository) {
     fun search(term: String): List<String> {
         return when {
             term.length < 2 -> emptyList<String>()
-            else -> cityRepository.searchByTerm(term)
+            else -> cityRepository.findCitiesStartingWith(term)
         }
     }
 }
