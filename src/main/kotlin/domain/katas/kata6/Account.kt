@@ -1,11 +1,12 @@
 package org.katas.domain.katas.kata6
 
-class Account(private val date: Date,private val accountTransactions: AccountTransactions) {
+class Account(private val dateProvider: DateProvider, private val transactions: MutableList<Transaction>) {
     fun deposit(amount: Int) {
-        accountTransactions.transactions.add(Transaction(date.now(), amount))
+        transactions.add(Transaction(dateProvider.now(), amount))
     }
     fun withdraw(amount: Int) {
-        accountTransactions.transactions.add(Transaction(date.now(), -amount))
+        transactions.add(Transaction(dateProvider.now(), -amount))
     }
-    fun printStatement() {}
+    fun printStatement() {
+    }
 }

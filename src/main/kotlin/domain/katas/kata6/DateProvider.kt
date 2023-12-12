@@ -1,5 +1,5 @@
 package org.katas.domain.katas.kata6
 
-interface Date {
+interface DateProvider {
     fun now(): String
 }
