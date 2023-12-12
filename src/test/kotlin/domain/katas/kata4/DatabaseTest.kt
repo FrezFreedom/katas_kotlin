@@ -1,11 +1,13 @@
 package domain.katas.kata4
 
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.katas.domain.katas.kata4.Database
 
 class DatabaseTest {
 
+    @DisplayName("validate database return all cities correctly")
     @Test
     fun testGetAllCities()
     {

@@ -1,5 +1,7 @@
 package domain.katas.kata4
 
+import io.mockk.every
+import io.mockk.mockk
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -11,15 +13,16 @@ import org.katas.domain.katas.kata4.Database
 import kotlin.test.assertTrue
 
 class CityRepositoryTest {
+    private val mockDatabase = mockk<Database> {
+        every { getAllCities() } answers { listOf("Paris", "Vancouver", "Valencia") }
+    }
 
-    @DisplayName("all should return a list of all cities")
+
+    @DisplayName("validate that all function of CityRepository return all cities correctly")
     @Test
     fun testAll(){
-        val expectedValue = listOf("Paris", "Budapest", "Skopje", "Rotterdam", "Valencia",
-            "Vancouver", "Amsterdam", "Vienna", "Sydney", "New York City",
-            "London", "Bangkok", "Hong Kong", "Dubai", "Rome", "Istanbul")
-        val database = Database()
-        val cityRepository = CityRepository(database)
+        val expectedValue = listOf("Paris", "Vancouver", "Valencia")
+        val cityRepository = CityRepository(mockDatabase)
 
         val result = cityRepository.all()
 
@@ -28,12 +31,11 @@ class CityRepositoryTest {
         assertTrue { result.containsAll(expectedValue) }
     }
 
-    @DisplayName("searchByTerm should return a list of cities that start with specific term")
+    @DisplayName("validate that searchByTerm function in CityRepository can return cities that contain the specific term")
     @ParameterizedTest
     @MethodSource("searchByTermData")
     fun testSearchByTerm(expectedValue: List<String>, term: String){
-        val database = Database()
-        val cityRepository = CityRepository(database)
+        val cityRepository = CityRepository(mockDatabase)
 
         val result = cityRepository.searchByTerm(term)
 
@@ -47,13 +49,9 @@ class CityRepositoryTest {
         fun searchByTermData() = listOf(
             Arguments.of(emptyList<String>(), "x"),
             Arguments.of(listOf("Valencia", "Vancouver"), "Va"),
-            Arguments.of(emptyList<String>(), "Xa"),
-            Arguments.of(listOf("Paris", "Budapest", "Skopje", "Rotterdam", "Valencia",
-                "Vancouver", "Amsterdam", "Vienna", "Sydney", "New York City",
-                "London", "Bangkok", "Hong Kong", "Dubai", "Rome", "Istanbul"), ""),
-            Arguments.of(listOf("Istanbul", "Paris"), "Is"),
             Arguments.of(listOf("Valencia", "Vancouver"), "va"),
-            Arguments.of(listOf("Vancouver", "Bangkok", "Istanbul"), "an"),
+            Arguments.of(listOf("Paris", "Vancouver", "Valencia"), ""),
+            Arguments.of(listOf("Vancouver"), "eR"),
         )
     }
 }
