@@ -4,6 +4,8 @@ class Account(private val date: Date,private val accountTransactions: AccountTra
     fun deposit(amount: Int) {
         accountTransactions.transactions.add(Transaction(date.now(), amount))
     }
-    fun withdraw(amount: Int) {}
+    fun withdraw(amount: Int) {
+        accountTransactions.transactions.add(Transaction(date.now(), -amount))
+    }
     fun printStatement() {}
 }
