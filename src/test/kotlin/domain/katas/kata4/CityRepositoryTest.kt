@@ -21,4 +21,16 @@ class CityRepositoryTest {
 
         Assertions.assertEquals(expectedValue, result)
     }
+
+    @DisplayName("searchByTerm should return a list of cities that start with specific term")
+    @Test
+    fun testSearchByTerm(){
+        val expectedValue = listOf("Valencia", "Vancouver")
+        val database = Database()
+        val cityRepository = CityRepository(database)
+
+        val result = cityRepository.searchByTerm("Va")
+
+        Assertions.assertEquals(expectedValue, result)
+    }
 }
