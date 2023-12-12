@@ -47,6 +47,7 @@ class CityRepositoryTest {
                 "Vancouver", "Amsterdam", "Vienna", "Sydney", "New York City",
                 "London", "Bangkok", "Hong Kong", "Dubai", "Rome", "Istanbul"), ""),
             Arguments.of(listOf("Istanbul"), "Is"),
+            Arguments.of(listOf("Valencia", "Vancouver"), "va"),
         )
     }
 }
