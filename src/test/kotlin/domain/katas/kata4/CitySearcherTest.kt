@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
+import org.katas.domain.katas.kata4.CityRepository
 import org.katas.domain.katas.kata4.CitySearcher
 import org.katas.domain.katas.kata4.Database
 
@@ -15,7 +16,8 @@ class CitySearcherTest {
     @MethodSource("searchData")
     fun testSearch(expectedValue: List<String>, term: String){
         val database = Database()
-        val citySearcher = CitySearcher(database)
+        val cityRepository = CityRepository(database)
+        val citySearcher = CitySearcher(cityRepository)
 
         val searchResult = citySearcher.search(term)
 
