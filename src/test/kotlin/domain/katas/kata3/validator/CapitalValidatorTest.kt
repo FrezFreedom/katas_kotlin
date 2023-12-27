@@ -19,7 +19,7 @@ class CapitalValidatorTest {
     }
     private val capitalValidator = CapitalValidator(numberToEnglishConvertor = mockNumberToEnglishConvertor)
 
-    @DisplayName("validate should return expected result based on capital character")
+    @DisplayName("it should validate whether input has at least one capital character")
     @ParameterizedTest
     @MethodSource("validateData")
     fun testValidate(expectedValue: PasswordValidationResult, input: String){

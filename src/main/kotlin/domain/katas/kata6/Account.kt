@@ -1,6 +1,8 @@
 package org.katas.domain.katas.kata6
 
-class Account(private val dateProvider: DateProvider,
+import com.google.inject.Inject
+
+class Account @Inject constructor(private val dateProvider: DateProvider,
               private val transactions: MutableList<Transaction>,
               private val printer: Printer) {
     fun deposit(amount: Int) {
@@ -14,10 +16,10 @@ class Account(private val dateProvider: DateProvider,
         var statement = ""
         transactions.forEach { transaction: Transaction ->
             balance += transaction.amount
-            statement = "${transaction.date} | ${transaction.amount} | $balance\\n" + statement
+            statement = "${transaction.date} | ${transaction.amount} | $balance\n" + statement
         }
 
-        statement = "DATE | AMOUNT | BALANCE\\n$statement"
+        statement = "DATE | AMOUNT | BALANCE\n$statement"
 
         printer.println(statement)
     }

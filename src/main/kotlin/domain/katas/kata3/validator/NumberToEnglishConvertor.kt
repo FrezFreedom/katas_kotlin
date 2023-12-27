@@ -1,5 +1,8 @@
 package org.katas.domain.katas.kata3.validator
 
+import com.google.inject.Singleton
+
+@Singleton
 class NumberToEnglishConvertor {
 
     fun convert(number: Int): String? {

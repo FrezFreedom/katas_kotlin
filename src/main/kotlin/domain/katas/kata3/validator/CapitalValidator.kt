@@ -1,8 +1,9 @@
 package org.katas.domain.katas.kata3.validator
 
+import com.google.inject.Inject
 import org.katas.domain.katas.kata3.dto.PasswordValidationResult
 
-class CapitalValidator(private val minCapitalCharacter: Int = 1,
+class CapitalValidator @Inject constructor(private val minCapitalCharacter: Int = 1,
                        private val numberToEnglishConvertor: NumberToEnglishConvertor): Validator {
 
     private var errorMessageFormat = "Password must contain at least %s capital letter"

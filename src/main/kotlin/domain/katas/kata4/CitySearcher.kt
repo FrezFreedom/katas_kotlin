@@ -1,6 +1,8 @@
 package org.katas.domain.katas.kata4
 
-class CitySearcher(private val cityRepository: CityRepository) {
+import com.google.inject.Inject
+
+class CitySearcher @Inject constructor(private val cityRepository: CityRepository) {
 
     fun search(term: String): List<String> {
         return when {

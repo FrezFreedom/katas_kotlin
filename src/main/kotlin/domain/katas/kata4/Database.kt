@@ -1,5 +1,8 @@
 package org.katas.domain.katas.kata4
 
+import com.google.inject.Singleton
+
+@Singleton
 class Database {
     companion object {
         private val cities = listOf("Paris", "Budapest", "Skopje", "Rotterdam", "Valencia",

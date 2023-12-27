@@ -1,6 +1,8 @@
 package org.katas.domain.katas.kata4
 
-class CityRepository(private val database: Database) {
+import com.google.inject.Inject
+
+class CityRepository @Inject constructor(private val database: Database) {
 
     fun all(): List<String> {
         return database.getAllCities()

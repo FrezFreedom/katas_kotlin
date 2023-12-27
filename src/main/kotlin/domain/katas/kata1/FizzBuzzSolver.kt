@@ -1,5 +1,8 @@
 package org.katas.domain.katas.kata1
 
+import com.google.inject.Singleton
+
+@Singleton
 class FizzBuzzSolver {
 
     fun solve(number: Int): String {
